@@ -21,9 +21,9 @@ class BelajarAppBar extends StatelessWidget {
     Image.network('https://cdn.hyprop.co.za/movies/images/5618/5618-1-3-3-1637863988.jpg?w=493.5&webp'),
   ];
   final List title = [
-    Text('Venom', style: TextStyle(color: Colors.white, fontSize: 18.0)),
-    Text('Avengers End Game', style: TextStyle(color: Colors.white, fontSize: 18.0)),
-    Text('Spider Man No Way Home', style: TextStyle(color: Colors.white, fontSize: 18.0)),
+    'Venom',
+    'Avengers End Game',
+    'Spider Man No Way Home',
   ];
 
   @override
