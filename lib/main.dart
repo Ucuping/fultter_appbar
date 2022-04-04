@@ -94,10 +94,10 @@ class BelajarAppBar extends StatelessWidget {
                               topLeft: Radius.circular(8.0),
                               topRight: Radius.circular(8.0),
                             ),
-                            child: image[index]),
+                            child: topMovieImage[index]),
                         ListTile(
                             title: Text(
-                          title[index],
+                          topMovieTitle[index],
                           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                         ))
                       ],
