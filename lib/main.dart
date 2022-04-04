@@ -15,6 +15,17 @@ class MyApp extends StatelessWidget {
 }
 
 class BelajarAppBar extends StatelessWidget {
+  final List image = [
+    Image.network('https://i.ytimg.com/vi/aPrXjzst6Ew/movieposter_en.jpg'),
+    Image.network('https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/01/The-Best-Movie-Franchises-To-Binge-Watch.jpg'),
+    Image.network('https://cdn.hyprop.co.za/movies/images/5618/5618-1-3-3-1637863988.jpg?w=493.5&webp'),
+  ];
+  final List title = [
+    Text('Venom', style: TextStyle(color: Colors.white, fontSize: 18.0)),
+    Text('Avengers End Game', style: TextStyle(color: Colors.white, fontSize: 18.0)),
+    Text('Spider Man No Way Home', style: TextStyle(color: Colors.white, fontSize: 18.0)),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +69,30 @@ class BelajarAppBar extends StatelessWidget {
           body: Center(
               child: TabBarView(children: [
             Icon(Icons.flight, size: 350),
-            Icon(Icons.directions_transit, size: 350),
+            ListView.builder(
+              itemBuilder: (context, index) {
+                return Container(
+                    margin: EdgeInsets.all(18),
+                    child: Card(
+                        child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        ClipRRect(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(8.0),
+                              topRight: Radius.circular(8.0),
+                            ),
+                            child: image[index]),
+                        ListTile(
+                            title: Text(
+                          title[index],
+                          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        ))
+                      ],
+                    )));
+              },
+              itemCount: image.length,
+            )
             // Icon(Icons.directions_car, size: 350),
           ])),
         ),
