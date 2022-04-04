@@ -81,30 +81,31 @@ class BelajarAppBar extends StatelessWidget {
           },
           body: Center(
               child: TabBarView(children: [
-            ListView.builder(
-              itemBuilder: (context, index) {
-                return Container(
-                    margin: EdgeInsets.all(18),
-                    child: Card(
-                        child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        ClipRRect(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(8.0),
-                              topRight: Radius.circular(8.0),
-                            ),
-                            child: topMovieImage[index]),
-                        ListTile(
-                            title: Text(
-                          topMovieTitle[index],
-                          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                        ))
-                      ],
-                    )));
-              },
-              itemCount: image.length,
-            ),
+            // ListView.builder(
+            //   itemBuilder: (context, index) {
+            //     return Container(
+            //         margin: EdgeInsets.all(18),
+            //         child: Card(
+            //             child: Column(
+            //           crossAxisAlignment: CrossAxisAlignment.stretch,
+            //           children: <Widget>[
+            //             ClipRRect(
+            //                 borderRadius: BorderRadius.only(
+            //                   topLeft: Radius.circular(8.0),
+            //                   topRight: Radius.circular(8.0),
+            //                 ),
+            //                 child: topMovieImage[index]),
+            //             ListTile(
+            //                 title: Text(
+            //               topMovieTitle[index],
+            //               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            //             ))
+            //           ],
+            //         )));
+            //   },
+            //   itemCount: image.length,
+            // ),
+            Text('aaaaa'),
             ListView.builder(
               itemBuilder: (context, index) {
                 return Container(
